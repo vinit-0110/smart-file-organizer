@@ -45,16 +45,22 @@ Designed with a modern interface and modular architecture, the project demonstra
 
 # 📸 Screenshots
 
-> **Coming Soon**
+## 📸 Screenshots
 
-After adding screenshots, replace this section with:
+### 🏠 Home
+![Home](assets/screenshots/Home.png)
 
-```text
-assets/screenshots/home.png
-assets/screenshots/statistics.png
-assets/screenshots/settings.png
-assets/screenshots/logs.png
-```
+### 📂 Organizing Files
+![Organizing](assets/screenshots/Organizing.png)
+
+### 📊 Statistics Dashboard
+![Statistics](assets/screenshots/Statistics.png)
+
+### ⚙️ Settings
+![Settings](assets/screenshots/Settings.png)
+
+### 📜 System Logs
+![Logs](assets/screenshots/Logs.png)
 
 ---
 
