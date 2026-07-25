@@ -62,7 +62,7 @@ Designed with a modern interface and modular architecture, the project demonstra
 ### 📜 System Logs
 ![Logs](assets/screenshots/Logs.png)
 
----
+
 
 
 ---
