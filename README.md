@@ -64,15 +64,6 @@ Designed with a modern interface and modular architecture, the project demonstra
 
 ---
 
-# 🎥 Demo
-
-> Demo GIF coming soon.
-
-Example location:
-
-```text
-assets/demo.gif
-```
 
 ---
 
