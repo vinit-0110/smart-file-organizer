@@ -45,7 +45,6 @@ Designed with a modern interface and modular architecture, the project demonstra
 
 # 📸 Screenshots
 
-## 📸 Screenshots
 
 ### 🏠 Home
 ![Home](assets/screenshots/Home.png)
