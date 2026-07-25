@@ -1,119 +1,213 @@
 # 📁 Smart File Organizer
 
-[![Python Version](https://img.shields.io/badge/python-3.12%2B-blue.svg)](https://www.python.org/)
-[![UI Framework](https://img.shields.io/badge/GUI-CustomTkinter-blueviolet.svg)](https://github.com/TomSchimansky/CustomTkinter)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](LICENSE)
-[![Platform](https://img.shields.io/badge/platform-Windows%20%7C%20macOS%20%7C%20Linux-lightgrey.svg)]()
-[![Code Style: PEP8](https://img.shields.io/badge/code%20style-PEP8-green.svg)]()
+<p align="center">
+  <strong>A modern Python desktop application that intelligently organizes files using category detection, SHA-256 duplicate analysis, undo support, batch renaming, and real-time statistics.</strong>
+</p>
 
-> A high-performance, cross-platform desktop application built with Python and CustomTkinter that automatically categorizes files, identifies duplicate content via SHA-256 hashing, logs transactional operations, and provides one-click atomic restoration.
+<p align="center">
 
----
+![Python](https://img.shields.io/badge/Python-3.12-blue?style=for-the-badge&logo=python)
+![GUI](https://img.shields.io/badge/GUI-CustomTkinter-0096FF?style=for-the-badge)
+![Platform](https://img.shields.io/badge/Platform-Windows-success?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-green?style=for-the-badge)
+![Status](https://img.shields.io/badge/Status-Active-brightgreen?style=for-the-badge)
 
-## 🌟 Key Features
-
-### 📁 Smart Categorization & Folder Scanning
-- **One-Click Automated Sorting**: Scans directories and sorts files into clear category folders (`Images`, `Videos`, `Audio`, `Documents`, `PDFs`, `Archives`, `Executables`, `Code Files`, `Spreadsheets`, `Presentations`, `Others`).
-- **Scalable Architecture**: Uses `os.scandir` generators and non-blocking multi-threading, capable of processing **50,000+ files** without freezing the GUI.
-- **Custom Rules Builder**: Define custom sorting criteria based on filename patterns, regex matches, extension filters, or file size thresholds (e.g. move files >100MB to a `Large_Files` directory).
-
-### 🔍 SHA-256 Duplicate File Detection
-- **Multi-Tier Hashing**: Optimizes duplicate detection using a 3-stage process (Size Grouping $\rightarrow$ 64KB Partial Hash $\rightarrow$ Full SHA-256 Hash) to eliminate unnecessary I/O.
-- **Duplicate Action Modes**: Choose whether to **Skip**, **Delete**, or **Move** duplicates to a dedicated `_Duplicates` directory.
-
-### ↩️ Transactional Undo & Restoration
-- **Atomic Operations**: All file transfers record transactional metadata in JSON logs.
-- **One-Click Restore**: Easily restore moved files back to their exact original locations and remove any empty folders created during organization.
-
-### 📊 Live Analytics & Embedded Charts
-- **Interactive Visualizations**: Integrated Matplotlib pie and bar charts display real-time storage distribution and file counts per category.
-- **CSV Exporting**: Export detailed activity reports and summary metrics to `.csv` format.
-
-### ⚙️ Portfolio & Commercial UX
-- **Modern Dark & Light Themes**: Powered by CustomTkinter with dynamic theme switching and responsive layouts.
-- **Multi-Language Support**: Complete interface localized in English, Spanish, French, German, and Chinese.
-- **Real-Time Logs Console**: Searchable, color-coded live log stream for debugging and activity auditing.
-- **Batch File Renamer**: Built-in tool for applying custom prefixes, suffixes, string replacements, and zero-padded sequential numbering to file batches.
-- **File Previewer**: Double-click any activity row to inspect file metadata or read text contents directly within the GUI.
+</p>
 
 ---
 
-## 🎨 UI Preview
+## ✨ Overview
 
-![Smart File Organizer App Preview](assets/screenshots/app_preview.png)
+Smart File Organizer is a desktop application built with **Python** and **CustomTkinter** that automatically organizes files into categorized folders based on file type. It includes **SHA-256 duplicate detection**, **Undo support**, **Batch Rename**, **CSV report generation**, **Activity Logs**, and **Real-time Statistics**.
+
+Designed with a modern interface and modular architecture, the project demonstrates practical software engineering concepts including multithreading, file system operations, configuration management, and logging.
 
 ---
 
-## 🏗️ Project Architecture
+# 🚀 Features
 
+- 📂 Automatic file organization
+- 🔍 SHA-256 duplicate detection
+- ↩ Undo last organization
+- 📊 Live statistics dashboard
+- 📝 Activity logs
+- 📦 Batch Rename utility
+- 📈 CSV report export
+- ⚙ Custom organization rules
+- 🌍 Multi-language support
+- 🌙 Dark / Light theme
+- 🔔 Desktop notifications
+- ⚡ Multi-threaded processing
+- 🗂 Recent folders
+- 🧹 Empty folder cleanup
+
+---
+
+# 📸 Screenshots
+
+> **Coming Soon**
+
+After adding screenshots, replace this section with:
+
+```text
+assets/screenshots/home.png
+assets/screenshots/statistics.png
+assets/screenshots/settings.png
+assets/screenshots/logs.png
 ```
+
+---
+
+# 🎥 Demo
+
+> Demo GIF coming soon.
+
+Example location:
+
+```text
+assets/demo.gif
+```
+
+---
+
+# 🏗 Project Structure
+
+```text
 smart-file-organizer/
 │
-├── app.py                  # Main CustomTkinter GUI application & tab navigation
-├── organizer.py            # Core organization engine & multi-threaded file scanner
-├── duplicate_detector.py   # Multi-tier SHA-256 duplicate detection engine
-├── undo_manager.py         # Transactional JSON history & atomic file restoration engine
-├── logger.py               # Centralized logging module with UI queue streaming
-├── settings.py             # Settings manager for settings.json & translations
-├── utils.py                # OS folder opener, file preview, notifications & CSV export
-├── requirements.txt        # Third-party Python dependencies
-├── settings.json           # Default user configuration storage
-├── README.md               # Complete repository documentation
-├── LICENSE                 # MIT License
-├── .gitignore              # Standard Python git ignore rules
+├── app.py
+├── organizer.py
+├── duplicate_detector.py
+├── undo_manager.py
+├── settings.py
+├── utils.py
+├── logger.py
+│
 ├── assets/
-│   ├── icons/              # High-resolution application PNG icons
-│   └── screenshots/        # UI screenshots and visual assets
-└── logs/
-    └── app.log             # Application log file
+│   ├── screenshots/
+│   └── demo.gif
+│
+├── logs/
+│
+├── requirements.txt
+├── LICENSE
+├── README.md
+└── .gitignore
 ```
 
 ---
 
-## ⚡ Quick Start & Installation
+# ⚙ Installation
 
-### Prerequisites
-- Python 3.12 or higher installed.
+Clone the repository
 
-### 1. Clone the Repository
 ```bash
-git clone https://github.com/your-username/smart-file-organizer.git
+git clone https://github.com/vinit-0110/smart-file-organizer.git
+```
+
+Go into the project
+
+```bash
 cd smart-file-organizer
 ```
 
-### 2. Install Dependencies
+Create a virtual environment
+
+```bash
+python -m venv .venv
+```
+
+Activate it
+
+### Windows
+
+```bash
+.venv\Scripts\activate
+```
+
+Install dependencies
+
 ```bash
 pip install -r requirements.txt
 ```
 
-### 3. Launch Application
+Run the application
+
 ```bash
 python app.py
 ```
 
-### 4. Run Automated Test Suite
-```bash
-python test_organizer.py
+---
+
+# 🛠 Technologies Used
+
+- Python 3
+- CustomTkinter
+- Pillow
+- SHA-256 Hashing
+- Threading
+- JSON
+- Logging
+- File System APIs
+
+---
+
+# 🧠 Architecture
+
+```text
+                 Smart File Organizer
+
+                      app.py
+                         │
+     ┌───────────────────┼───────────────────┐
+     │                   │                   │
+ Settings          Organizer Engine      Logger
+     │                   │
+     │         Duplicate Detector
+     │                   │
+     │            Undo Manager
+     │                   │
+     └────────────── Utilities ──────────────┘
 ```
 
 ---
 
-## ⌨️ Keyboard Shortcuts
+# 📊 Highlights
 
-| Shortcut | Action |
-| :--- | :--- |
-| `Ctrl + O` | Browse target folder |
-| `Ctrl + R` | Start organizing files |
-| `Ctrl + Z` | Undo last transaction |
-
----
-
-## 📄 License
-
-This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+- Modular architecture
+- Object-Oriented Design
+- Multi-threaded processing
+- Efficient duplicate detection
+- Undo support
+- Configuration persistence
+- Activity logging
+- CSV reporting
 
 ---
 
-## 👨‍💻 Author & Contributions
+# 🔮 Future Improvements
 
-Built as a production-quality portfolio desktop application demonstrating modern Python GUI architecture, multi-threaded worker patterns, and clean modular software design.
+- AI-powered file categorization
+- Cloud storage integration
+- Automatic scheduling
+- Drag & Drop support
+- Plugin architecture
+- Advanced search filters
+
+---
+
+# 📄 License
+
+This project is licensed under the **MIT License**.
+
+---
+
+# 👨‍💻 Author
+
+**Vinit Gajjar**
+
+- GitHub: https://github.com/vinit-0110
+
+---
+
+⭐ If you found this project useful, consider giving it a star!
